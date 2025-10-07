@@ -5,52 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MeltChat.ai • Coming Soon</title>
 
+  <!-- Basic SEO -->
   <meta name="description" content="The website is under active development. Our team is preparing the first public release. Coming soon." />
   <meta name="robots" content="index,follow" />
+
+  <!-- Social (Open Graph / Twitter) -->
   <meta property="og:title" content="MeltChat.ai • Coming Soon" />
   <meta property="og:description" content="The website is under active development. Our team is preparing the first public release. Coming soon." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://meltchat.ai/" />
 
   <style>
-    :root { --fg:#f5f7fa; --sub:#b6c0cc; }
-    * { box-sizing:border-box; }
-    html,body { height:100%; }
-    body{
-      margin:0; background:#000; color:var(--fg);
-      font-family: Inter, ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      display:grid; place-items:center; line-height:1.6;
-      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    :root { --fg: #f5f7fa; --sub: #b6c0cc; --accent: #ffffff; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: #000; /* pure black */
+      color: var(--fg);
+      font-family: Inter, ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      display: grid;
+      place-items: center;
+      line-height: 1.6;
     }
-    .wrap{
-      /* 关键：让容器更宽，标题才有空间一行显示 */
-      width:96vw;            /* 基本占满屏 */
-      max-width:1200px;      /* 但别超过 1200 */
-      text-align:center;
-      padding:40px 20px;
-      margin:0 auto;
+    .wrap {
+      width: min(92vw, 860px);
+      text-align: center;
+      padding: 40px 20px;
     }
-    .logo{
-      width:min(420px, 40vw);  /* 略收，给标题留横向空间 */
-      height:auto; display:block; margin:0 auto 24px;
-      filter:drop-shadow(0 10px 30px rgba(255,255,255,.06));
+    .logo {
+      width: min(560px, 70vw);
+      max-width: 560px;
+      height: auto;
+      display: block;
+      margin: 0 auto 28px;
+      filter: drop-shadow(0 10px 30px rgba(255,255,255,.06));
     }
-    h1{
-      margin:0 0 12px;
-      white-space:nowrap;           /* 不换行 */
-      font-size:clamp(20px, 4.6vw, 56px); /* 随屏宽缩放，保证能塞下一行 */
-      letter-spacing:.02em; line-height:1.2;
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: .02em;
     }
-    p{
-      margin:8px 0; color:var(--sub);
-      font-size:clamp(14px, 2.2vw, 18px);
+    p {
+      margin: 8px 0;
+      color: var(--sub);
+      font-size: clamp(14px, 2.2vw, 18px);
     }
-
-    /* 如需在超小屏(<=420px)也绝不换行，可删掉这个媒体查询。
-       现在的策略是超小屏允许换行避免溢出。*/
-    @media (max-width:420px){
-      .logo{ width:min(320px, 58vw); }
-      h1{ white-space:normal; text-wrap:balance; font-size:clamp(18px, 6vw, 34px); }
+    .pill {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--fg);
+      text-decoration: none;
+      transition: background .2s ease, border-color .2s ease;
+    }
+    .pill:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.24); }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
@@ -60,6 +74,9 @@
     <h1>The website is under active development.</h1>
     <p>Our team is preparing the first public release.</p>
     <p>Coming soon.</p>
+    <!-- Optional contact pill:
+    <a class="pill" href="mailto:hello@meltchat.ai">Contact</a>
+    -->
   </main>
 </body>
 </html>
