@@ -16,17 +16,19 @@
   <meta property="og:url" content="https://meltchat.ai/" />
 
   <style>
-    :root { --fg: #f5f7fa; --sub: #b6c0cc; --accent: #ffffff; }
+    :root { --fg: #f5f7fa; --sub: #b6c0cc; }
     * { box-sizing: border-box; }
     html, body { height: 100%; }
     body {
       margin: 0;
-      background: #000; /* pure black */
+      background: #000;
       color: var(--fg);
       font-family: Inter, ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       display: grid;
       place-items: center;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     .wrap {
       width: min(92vw, 860px);
@@ -34,49 +36,23 @@
       padding: 40px 20px;
     }
     .logo {
-      width: min(560px, 70vw);
-      max-width: 560px;
+      width: min(520px, 62vw);   /* 给标题留空间 */
       height: auto;
       display: block;
-      margin: 0 auto 28px;
+      margin: 0 auto 24px;
       filter: drop-shadow(0 10px 30px rgba(255,255,255,.06));
     }
     h1 {
       margin: 0 0 10px;
-      font-size: clamp(28px, 4vw, 44px);
+      white-space: nowrap;                 /* 关键：强制不换行 */
+      font-size: clamp(20px, 5.2vw, 56px); /* 随屏宽缩放，尽量一行显示 */
       letter-spacing: .02em;
+      line-height: 1.2;
     }
     p {
       margin: 8px 0;
       color: var(--sub);
       font-size: clamp(14px, 2.2vw, 18px);
     }
-    .pill {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 10px 14px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 999px;
-      font-size: 14px;
-      color: var(--fg);
-      text-decoration: none;
-      transition: background .2s ease, border-color .2s ease;
-    }
-    .pill:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.24); }
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
   </style>
-</head>
-<body>
-  <main class="wrap" role="main" aria-label="MeltChat.ai Coming Soon">
-    <img class="logo" src="logo.png" alt="MELTCHAT logo" />
-    <h1>The website is under active development.</h1>
-    <p>Our team is preparing the first public release.</p>
-    <p>Coming soon.</p>
-    <!-- Optional contact pill:
-    <a class="pill" href="mailto:hello@meltchat.ai">Contact</a>
-    -->
-  </main>
-</body>
-</html>
+</
