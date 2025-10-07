@@ -1,16 +1,81 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>网站建设中</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MeltChat.ai • Coming Soon</title>
+
+  <!-- Basic SEO -->
+  <meta name="description" content="MeltChat.ai is registered. The site is under construction — coming soon." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Social (Open Graph / Twitter) -->
+  <meta property="og:title" content="MeltChat.ai • Coming Soon" />
+  <meta property="og:description" content="MeltChat.ai is registered. The site is under construction — coming soon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://meltchat.ai/" />
+
   <style>
-    body {font-family:sans-serif;text-align:center;padding-top:100px;background:#fafafa;}
-    h1 {font-size:28px;color:#333;}
-    p {color:#666;}
+    :root { --fg: #f5f7fa; --sub: #b6c0cc; --accent: #ffffff; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: #000; /* pure black */
+      color: var(--fg);
+      font-family: Inter, ui-sans-serif, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      display: grid;
+      place-items: center;
+      line-height: 1.6;
+    }
+    .wrap {
+      width: min(92vw, 860px);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .logo {
+      width: min(560px, 70vw);
+      max-width: 560px;
+      height: auto;
+      display: block;
+      margin: 0 auto 28px;
+      filter: drop-shadow(0 10px 30px rgba(255,255,255,.06));
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: .02em;
+    }
+    p {
+      margin: 8px 0;
+      color: var(--sub);
+      font-size: clamp(14px, 2.2vw, 18px);
+    }
+    .pill {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--fg);
+      text-decoration: none;
+      transition: background .2s ease, border-color .2s ease;
+    }
+    .pill:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.24); }
+    /* Respect user motion preferences */
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
   </style>
 </head>
 <body>
-  <h1>mywebsite.com 已被注册</h1>
-  <p>网站建设中，敬请期待。</p>
+  <main class="wrap" role="main" aria-label="MeltChat.ai Coming Soon">
+    <img class="logo" src="logo.png" alt="MELTCHAT logo" />
+    <h1>MeltChat.ai is registered</h1>
+    <p>The site is under construction — coming soon.</p>
+    <!-- Optional contact pill: replace with your email or remove the link entirely -->
+    <!-- <a class="pill" href="mailto:hello@meltchat.ai">Contact</a> -->
+  </main>
 </body>
 </html>
